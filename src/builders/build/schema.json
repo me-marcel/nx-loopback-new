@@ -22,7 +22,8 @@
         },
         "outputPath": {
             "type": "string",
-            "description": "path to the application dist"
+            "description": "path to the application dist",
+            "default": ""
         }
     }
 }
