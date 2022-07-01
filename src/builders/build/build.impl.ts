@@ -42,11 +42,16 @@ async function build(options: LoopbackBuildBuilderOptions, context: BuilderConte
 }
 
 function spawnLb(options: LoopbackBuildBuilderOptions, context: BuilderContext) {
-    return childProcess.spawnSync('npx', [
+    let builderOptions = [
         'lb-tsc',
         '-p', `${options.tsConfig}`,
-        '--outDir', `${options.outputPath}`,
-    ], {
+    ];
+
+    if (options.outputPath !== '') {
+        builderOptions.push('--outDir', `${options.outputPath}`);
+    }
+
+    return childProcess.spawnSync('npx', builderOptions, {
         cwd: path.resolve(context.workspaceRoot, options.appPath),
         shell: true,
     });
