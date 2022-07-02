@@ -1,0 +1,14 @@
+export const environment = {
+  production: false,
+  recaptcha_v3_secret_key: '',
+  smtp_account: {
+    hostname: '',
+    username: '',
+    password: '',
+    port: 587,
+    secure: false,
+    requireTLS: true,
+    from: '"Nx Loopback New" <loopback@local>',
+    to: 'contact@local'
+  },
+};
