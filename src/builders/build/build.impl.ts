@@ -51,6 +51,10 @@ function spawnLb(options: LoopbackBuildBuilderOptions, context: BuilderContext) 
         builderOptions.push('--outDir', `${options.outputPath}`);
     }
 
+    if (options.watch) {
+        builderOptions.push('--watch');
+    }
+
     return childProcess.spawnSync('npx', builderOptions, {
         cwd: path.resolve(context.workspaceRoot, options.appPath),
         shell: true,

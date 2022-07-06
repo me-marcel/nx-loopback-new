@@ -68,11 +68,13 @@ With Angular CLI:
 
 #### Schema
 
-| Name       | Type    | Default | Required | Description                                 |
-|------------|---------|---------|:--------:|---------------------------------------------|
-| appPath    | string  |         | yes      | Path the application. ie. apps/backend      |
-| tsConfig   | string  |         | yes      | Path to the tsConfig.json file for Loopback |
-| clean      | boolean | false   | no       | Delete dist files prior to build            |
+| Name       | Type    | Default | Required | Description                                                                    |
+|------------|---------|---------|:--------:|--------------------------------------------------------------------------------|
+| appPath    | string  |         |   yes    | Path the application. ie. apps/backend                                         |
+| tsConfig   | string  |         |   yes    | Path to the tsConfig.json file for Loopback                                    |
+| outputPath | string  |         |    no    | Path the dist target folder (set to use `dist/apps/{project_name}` by default) |
+| clean      | boolean | false   |    no    | Delete dist files prior to build                                               |
+| watch      | boolean | false   |    no    | Watch for code changes and automatically re-build when needed                  |
 
 ### Execute
 
@@ -101,8 +103,7 @@ With Angular CLI:
 
 I would like to see the following features added to the project.
 
-- Build with watch
-- Linting
+- Execute with watch
 - Unit tests
 
 ## Shoutouts and Credit
