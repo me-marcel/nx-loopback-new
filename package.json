@@ -20,7 +20,7 @@
         "@angular-devkit/architect": "^0.803.21",
         "@angular-devkit/core": "8.3.14",
         "@angular-devkit/schematics": "8.3.14",
-        "@nrwl/workspace": "^8.9.0",
+        "@nrwl/workspace": "^16.5.1",
         "shelljs": "^0.8.3"
     },
     "devDependencies": {
